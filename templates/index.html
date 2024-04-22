@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="game-board">
+    {% for row in board %}
+    <div class="board-row">
+        {% for letter in row %}
+        <span class="title">{{ letter }}</span>
+        {% endfor %}
+    </div> 
+    {% endfor %}
+</div>
+<form id="word-form">
+    <input type="text" id="word-input" autocomplete="off" placeholder="Enter a word">
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
